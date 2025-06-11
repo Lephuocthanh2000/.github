@@ -19,6 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Github Deployment
-        uses: gitops-ci-cd/.github/actions/deploy@main
+        uses: Lephuocthanh2000/.github/actions/deploy@main
         with:
           environment: ${{ inputs.environment }}

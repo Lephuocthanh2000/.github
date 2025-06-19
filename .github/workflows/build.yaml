@@ -28,6 +28,12 @@ jobs:
   image:
     name: Image
     runs-on: ubuntu-latest
+    permissions:  
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+      deployments: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -39,3 +45,4 @@ jobs:
         with:
           registry: ${{ inputs.registry }}
           image_name: ${{ inputs.image_name }}
+
